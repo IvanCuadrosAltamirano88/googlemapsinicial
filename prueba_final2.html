@@ -29,6 +29,7 @@
       // When the user clicks the marker, an info window opens.
       // The maximum width of the info window is set to 200 pixels.
       //var marker;
+      var path  = "G:/GIT/googlemapsinicial/";
       function initMap() {
         
         var markers = [];
@@ -118,7 +119,7 @@
             map: map,
             draggable: true,
             animation: google.maps.Animation.DROP,
-            icon: "D:/JAVASCRIPT/GOOGLE MAPS/LogoIBB_small.png",
+            icon: path + "LogoIBB_small.png",
             title: locations[i][3] 
             
           });
@@ -152,11 +153,12 @@
               infowindow.setContent('Location found.');
               map.setCenter(pos);
               
+              //var image = path + 'IconoReferencia2.jpg';
               var geoMarker = new google.maps.Marker({
                 //position: {lat: -11.861691610680246, lng: -77.08171779289842},
                 position: pos,
-                map: map//,
-                //icon: image
+                map: map,
+                icon: path + 'PuntoInicial5.ico'
               });
 
             }, function() {
